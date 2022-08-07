@@ -40,7 +40,7 @@ io.on('connection', socket => {
         socket.join(user.room);
         //welcome current user
         socket.emit("message", formatMessage(botname, "Welcome to WebChat"));
-        console.log(username,"joined");
+        // console.log(username,"joined");
 
         //Broadcast when a user connects
         socket.broadcast.to(user.room).emit('message', formatMessage(username, ' has joined the chat'));
