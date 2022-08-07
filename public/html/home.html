@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arimo:wght@500&family=Baloo+Bhai+2:wght@700&family=Bebas+Neue&family=Josefin+Sans:ital,wght@1,200&family=League+Spartan:wght@700&family=Lobster&family=Poppins:wght@300&family=Rubik:wght@300&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet">
+    <title>home</title>
+</head>
+
+<body>
+    <nav>
+        
+        <div class="navbar">
+            <a href="#" onclick="sidemenu()" class="logo"><img
+                    src="../media/logo/menu-button-of-three-horizontal-lines.png" id="menubtn" alt="">
+            </a>
+            <span id="roomname"> <span class="subroom"> Roomname:</span>  dhauji</span>
+            <span class="logotext">Web Chat</span>
+        </div>
+        <div class="sidemenu" id="sidemenu">
+            <li class="li">
+                <div href="#" class="items">MENU</div>
+            </li>
+            <li class="li active"><a href="#" class="items">Home</a></li>
+            <li class="li"><a href="#" class="items">About us</a></li>
+        </div>
+    </nav>
+    <div class="bigcontainer">
+        <div class="subcontainer">
+            <div class="user-container">
+                <div class="roomname"> <img src="../media/Assets/kisspng-computer-icons-users-group-icon-design-joining-5ae165f181f1d7.5080867215247211375323.png" alt=""> Users</div>
+                <hr>
+                <!-- <div class="user">Harsh Dhau<div class="status">Active now <span class="circle"></span></div></div> -->
+                <div id="users">
+                    <div class="otheruser">Anshu<div class="status">Active now <span class="circle"></span></div></div>
+                    <div class="otheruser">Raj<div class="status">Active now <span class="circle"></span></div></div>
+                </div>
+            </div>
+            <a href="/" > <button class="leavechatbtn">Leave chat</button> </a>
+
+        </div>
+        <div class="subcontainer">
+
+            <div class="container">
+                <!-- <div class="message left"><div class="username">Raj</div>hello friends I am Raj what are you doing i am not doing. <span class="time">12:00 PM</span></div>
+                    <div class="message right"> <div class="username">Anshu</div>hello friends I am Anshu. <span class="time">12:00 PM</span></div> -->
+                </div>
+        
+            <div class="send">
+                <form action="#" id="send-container">
+                    <input type="text" name="messageInp" placeholder="Enter your message" id="messageInp">
+                    <button type="submit" id="btn">Send <img src="../media/Assets/send-button-371579.png" alt=""></button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+
+<script>
+    function sidemenu() {
+        console.log("function activated.")
+        let sidemenu = document.querySelector("#sidemenu");
+        let menubtn = document.querySelector("#menubtn");
+        if (sidemenu.style.transform != "translateX(-220px)") {
+            sidemenu.style.transform = " translateX(-220px)";
+            menubtn.style.filter = "invert(0)";
+
+        }
+        else {
+            sidemenu.style.transform = " translateX(0px)";
+            menubtn.style.filter = "invert(1)";
+
+        }
+
+    }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.11.0/qs.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/client.js"></script>
+
+</html>
