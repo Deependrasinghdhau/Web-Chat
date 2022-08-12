@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
     <link
         href="https://fonts.googleapis.com/css2?family=Arimo:wght@500&family=Baloo+Bhai+2:wght@700&family=Bebas+Neue&family=Josefin+Sans:ital,wght@1,200&family=League+Spartan:wght@700&family=Lobster&family=Poppins:wght@300&family=Rubik:wght@300&family=Ubuntu:wght@300&display=swap"
         rel="stylesheet">
@@ -27,12 +28,20 @@
                 <div href="#" class="items">MENU</div>
             </li>
             <li class="li active"><a href="#" class="items">Home</a></li>
-            <li class="li"><a href="#" class="items">About us</a></li>
+            <li class="li">
+                <!-- <a href="#" class="items">About us</a> -->
+                
+            </li>
         </div>
     </nav>
     <div class="bigcontainer">
-        <div class="subcontainer">
-            <div class="user-container">
+        <div class="showbtncover">
+            <button class="showbtn" onclick="loadmenu()">users</button>
+            <a href="/" > <button class="leavechatbtn">Leave chat</button> </a>
+        </div>
+        <div class="subcontainer loadmenu" id="user-mobile">
+            <div class="user-container"> 
+                <button class="closebtn" onclick="loadmenu()">+</button>
                 <div class="roomname"> <img src="../media/Assets/kisspng-computer-icons-users-group-icon-design-joining-5ae165f181f1d7.5080867215247211375323.png" alt=""> Users</div>
                 <hr>
                 <!-- <div class="user">Harsh Dhau<div class="status">Active now <span class="circle"></span></div></div> -->
@@ -41,7 +50,7 @@
                     <div class="otheruser">Raj<div class="status">Active now <span class="circle"></span></div></div> -->
                 </div>
             </div>
-            <a href="/" > <button class="leavechatbtn">Leave chat</button> </a>
+            <!-- <a href="/" > <button class="leavechatbtn">Leave chat</button> </a> -->
 
         </div>
         <div class="subcontainer">
@@ -49,11 +58,12 @@
             <div class="container">
                 <!-- <div class="message left"><div class="username">Raj</div>hello friends I am Raj what are you doing i am not doing. <span class="time">12:00 PM</span></div>
                     <div class="message right"> <div class="username">Anshu</div>hello friends I am Anshu. <span class="time">12:00 PM</span></div> -->
-                </div>
+
+            </div>
         
             <div class="send">
                 <form action="#" id="send-container">
-                    <input type="text" name="messageInp" placeholder="Enter your message" id="messageInp">
+                    <input type="text" name="messageInp" placeholder="Enter your message" id="messageInp" autocomplete="off">
                     <button type="submit" id="btn">Send <img src="../media/Assets/send-button-371579.png" alt=""></button>
                 </form>
             </div>
@@ -80,6 +90,17 @@
         }
 
     }
+    function loadmenu(){
+        let loadmenu = document.querySelector('.loadmenu');
+        if(loadmenu.style.display != "none"){
+            loadmenu.style.display = "none";
+        }
+        else{
+            loadmenu.style.display ="flex ";
+        }
+        // loadmenu.style.opacity= "0";
+    }
+    let scr = document.getElementById('btn');
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.11.0/qs.js"></script>
 <script src="/socket.io/socket.io.js"></script>

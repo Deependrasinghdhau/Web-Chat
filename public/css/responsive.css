@@ -1,0 +1,155 @@
+@media only screen and (max-width: 718px){
+    .container{
+        width: 500px;
+    }
+    #messageInp{
+        width: 382px;
+    }
+    .message{
+        width: 30%;
+    }
+}
+@media only screen and (max-width: 589px){
+    .container{
+        width: 407px;
+    }
+    #messageInp{
+        width: 289px;
+    }
+    .message{
+        width: 35%;
+    }
+}
+@media only screen and (max-width: 491px){
+    .container{
+        padding: 4px;
+        width: 90%;
+    }
+    #messageInp{
+        width: 250px;
+    }
+    .message{
+        width: 40%;
+    }
+    .showbtncover{
+        width: 390px;
+    }
+
+    .showbtn{
+        width: 183px;
+    }
+
+    .leavechatbtn{
+        width: 183px;
+    }
+}
+
+@media only screen and (max-width: 453px){
+    .container{
+        width: 95%;
+    }
+
+    #btn{
+        font-size: 0em;
+        padding: 12px 20px;
+        border-radius: 66px;
+        justify-content: center;
+        width: 80px;
+    }
+    /* #messageInp{
+        width: 250px;
+    } */
+
+    .showbtncover{
+        width: 375px;
+    }
+    .showbtn{
+        width: 170px;
+    }
+
+    .leavechatbtn{
+        width: 170px;
+    }
+
+    #send-container{
+        margin-top: 10px;
+        padding: 10px;
+    }
+    .user-container{
+        width: 380px;
+    }
+}
+
+@media only screen and (max-width: 397px){
+    .container{
+        width: 93%;
+        margin-top: 12px;
+    }
+    .showbtncover{
+        width: 93%;
+    }
+    #messageInp{
+        width: 240px;
+    }
+    .user-container{
+        width: 360px;
+    }
+    .leavechatbtn{
+        margin-top: 10px;
+    }
+    .showbtn{
+        margin-top: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 390px){
+    .container{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 385px){
+    .leavechatbtn{
+        width: 165px;
+    }
+    .showbtn{
+        width: 165px;
+    }
+    #btn{
+        margin-left: 6px;
+    }
+    .user-container{
+        width: 350px;
+    }
+}
+
+@media only screen and (max-width: 372px){
+    .leavechatbtn{
+        width: 158px;
+    }
+    .showbtn{
+        width: 158px;
+    }
+    .showbtncover{
+        width: 90%;
+    }
+    .container{
+        width: 89%;
+    }
+    .message{
+        width: 45%;
+    }
+    .user-container{
+        width:340px ;
+    }
+}
+
+@media only screen and (max-width: 368px){
+    #messageInp{
+        width: 224px;
+    }
+    .user-container{
+        width: 330px;
+    }
+}
